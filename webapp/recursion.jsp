@@ -171,7 +171,7 @@
         }
         else
 	{
-	    treeSize = math.pow(branchingFactor, height) + narryTreeSize(branchingFactor, height - 1); 
+	    treeSize = ((int) Math.pow(branchingFactor, height)) + nnaryTreeSize(branchingFactor, height - 1); 
 	}
 
 	    return treeSize;
@@ -189,10 +189,20 @@
      */
     public int treeSum(Tree tree)
     {
-	
-    	int branchingFactor = tree.getChildren();
-	int value;
-	return 0;
+	ArrayList<Tree> children = tree.getChildren();
+
+	int sum = 0;
+	int index = children.size();
+
+	if (index == 0)
+	{	
+		return tree.getValue();
+	}
+	else
+	{
+		sum = children.get(index) + treeSum(children.get(index - 1);
+    	}
+	return sum;
     }
     
     /** **********************************************************************
