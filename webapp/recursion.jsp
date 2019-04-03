@@ -35,7 +35,7 @@
          */
 	int result;
 
-        if (n == 1)
+        if (value == 1)
 	{
 		return 1;
 	}
@@ -49,7 +49,7 @@
          * 
          * By doing this, we break up the equation n! into n! = n * (n-1)!.
          */
-        result = factorial(n-1)*n;
+        result = factorial(value - 1)* value;
 	return result;
     }
 
@@ -116,6 +116,7 @@
         public Tree(int value)
         {
     	    this.value = value;
+	    children = new ArrayList<Tree>();
         }
     
         public int getValue()
@@ -125,20 +126,12 @@
     
         public ArrayList<Tree> getChildren()
         {
-    		if (value == 0)
-		{
-			return 0;
-		}
-		else
-		{
-		\\TODO: FIX
-			getChildren(value -1);
-		} 
+		return children;
         }
     
         public void add(Tree child)
         {
-    	    //TODO
+    	   children.add(child);
         }
     }
     
@@ -196,8 +189,9 @@
      */
     public int treeSum(Tree tree)
     {
+	
     	int branchingFactor = tree.getChildren();
-	int value = 
+	int value;
 	return 0;
     }
     
@@ -343,3 +337,5 @@
 %>
 </body>
 </html>
+
+
