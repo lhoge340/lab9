@@ -192,9 +192,9 @@
 	ArrayList<Tree> children = tree.getChildren();
 
 	int sum = 0;
-	int index = children.size();
+	int index = children.size() - 1;
 
-	if (index == 0)
+	if (index == -1)
 	{	
 		return tree.getValue();
 	}
