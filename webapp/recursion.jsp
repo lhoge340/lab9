@@ -13,8 +13,8 @@
      * This lab tests your ability to implement recursion for several functions.
      * 
      * @authors: Stephen, Mukhtar, MoSho
-     * @editer: YOUR_NAME_HERE
-     * @version DATE_HERE
+     * @editer: Lynden Hoge
+     * @version 2019-04-02
      */
 
     /** **********************************************************************
@@ -33,8 +33,13 @@
          * Here is the base case (ending condition): value == 1.
          * This lets our recursion know when to stop.
          */
-        //TODO
+	int result;
 
+        if (n == 1)
+	{
+		return 1;
+	}
+	
 
         /*
          * Here is the recursive statement. The function calls itself when the 
@@ -44,8 +49,8 @@
          * 
          * By doing this, we break up the equation n! into n! = n * (n-1)!.
          */
-        //TODO
-
+        result = factorial(n-1)*n;
+	return result;
     }
 
     /** **********************************************************************
@@ -66,7 +71,18 @@
      */
     public int fibonacci(int n)
     {
-        //TODO
+        if (n == 0)
+	{
+		return 0;
+	}
+	else if (n == 1)
+	{
+		return 1;
+	}
+	else
+	{
+		return fibonacci(n-1)+fibonacci(n-1);
+	}
     }
 
     
@@ -99,17 +115,25 @@
     
         public Tree(int value)
         {
-    	    //TODO
+    	    this.value = value;
         }
     
         public int getValue()
         {
-    	    //TODO
+		return value;
         }
     
         public ArrayList<Tree> getChildren()
         {
-    	    //TODO
+    		if (value == 0)
+		{
+			return 0;
+		}
+		else
+		{
+		\\TODO: FIX
+			getChildren(value -1);
+		} 
         }
     
         public void add(Tree child)
@@ -146,12 +170,20 @@
      */
     public int nnaryTreeSize(int branchingFactor, int height)
     {
+	int treeSize;
+
         if (height == 1) 
         {
-    	    //TODO
+    	    return 1;
         }
-        
-    	//TODO
+        else
+	{
+	    treeSize = math.pow(branchingFactor, height) + narryTreeSize(branchingFactor, height - 1); 
+	}
+
+	    return treeSize;
+    	
+
     }
 
     /** **********************************************************************
@@ -164,7 +196,9 @@
      */
     public int treeSum(Tree tree)
     {
-    	//TODO
+    	int branchingFactor = tree.getChildren();
+	int value = 
+	return 0;
     }
     
     /** **********************************************************************
