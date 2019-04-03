@@ -200,7 +200,7 @@
 	}
 	else
 	{
-		sum = children.get(index) + treeSum(children.get(index - 1);
+		sum = children.get(index).getValue() + treeSum(children.get(index - 1));
     	}
 	return sum;
     }
